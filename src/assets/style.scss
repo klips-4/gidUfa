@@ -596,7 +596,18 @@ span.coordinates-item {
 
 }
 
-
+@media screen and (max-width: 600px) {
+  .nav__list {
+    display: block;
+    width: 100%;
+    float: none;
+  }
+   .nav {
+    display: block;
+    width: 100%;
+    float: none;
+  }
+}
 
 
 
