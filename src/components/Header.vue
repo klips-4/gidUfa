@@ -4,12 +4,12 @@
       <div class="header__top">
         <nav class="nav">
           <div class="nav__logo">
-            <h2 class="logo"><a href="#!">ГидУФА</a></h2>
+            <h2 class="logo"><strong><a href="#!">ГидУФА</a></strong></h2>
           </div>
           <ul class="nav__list">
-            <li><a href="#!" class="active">История Уфы</a></li>
-            <li><a href="#!">Достопримечательности</a></li>
-            <li><a href="#!">О нас</a></li>
+            <li><strong><a href="#!" >История Уфы</a></strong></li>
+            <li><strong><a href="#!">Достопримечательности</a></strong></li>
+            <li><strong><a href="#!">О нас</a></strong></li>
           </ul>
         </nav>
       </div>
