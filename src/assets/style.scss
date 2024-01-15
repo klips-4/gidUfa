@@ -94,8 +94,8 @@
 .nav__list {
   display: flex;
   column-gap: 80px;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 20px;
+  font-family: Calibri;
 }
 
 .nav__list a.active::after,
@@ -135,9 +135,9 @@
 /* Logo */
 
 .logo {
-  font-size: 25px;
+  font-size: 30px;
   color: #fff;
-  font-weight: 700;
+  font-family: "Comic Sans MS";
 
 }
 
@@ -181,6 +181,7 @@
 .header__title {
   margin-bottom: 30px;
   font-size: 55px;
+  font-family: Calibri;
 }
 
 .header__text {
@@ -188,6 +189,7 @@
   font-size: 25px;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.5);
+  font-family: Calibri;
 }
 
 //.header__btn {
@@ -233,7 +235,6 @@
   font-size: 24px;
   font-weight: 500;
   color: var(--secondary);
-
 }
 
 .destinations__text p {
@@ -596,16 +597,23 @@ span.coordinates-item {
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 695px) {
   .nav__list {
     display: block;
     width: 100%;
     float: none;
+
   }
    .nav {
     display: block;
     width: 100%;
     float: none;
+    margin: 10px;
+  }
+
+  .information-cards__title{
+    font-size: 30px;
+    text-align: center;
   }
 }
 
