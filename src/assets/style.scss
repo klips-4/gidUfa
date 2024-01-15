@@ -50,25 +50,36 @@
 
 .header__row {
   display: flex;
+  @media (max-width: 1280px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .header__content {
   max-width: 592px;
+  margin-bottom: -80px;
+  margin-right: 120px;
   position: relative;
   z-index: 1;
 }
 
 .header__image {
+  display: flex;
+  justify-content: center;
   position: relative;
   flex-grow: 1;
+
+
 }
 
 .header__image img {
-  position: absolute;
+  margin-bottom: 20px;
   top: 0;
   right: 0;
-  width: 500px;
+  max-width: 100%;
   height: 300px;
+  width: 500px;
 }
 
 .header a {
@@ -204,8 +215,34 @@
 }
 
 .destinations__row {
-  display: flex;
-  column-gap: 50px;
+
+  display: grid;
+  //!* Три колонки *!
+  grid-template-columns: auto auto;
+  //!* Два ряда *!
+  grid-template-rows: auto auto;
+  //!* Автоматическое размещение в ряд *!
+  grid-auto-flow: row;
+  //!* Отступы между ячейками *!
+  gap: 20px;
+
+  @media (max-width: 1280px) {
+    grid-template-columns: auto;
+
+    .slide-image {
+      max-width: 100%;
+      border-radius: 20px;
+    }
+
+    .swiper-slide {
+      padding: 10px;
+      border-radius: 35px;
+      transition: 0.2s ease-in;
+    }
+    .swiper {
+
+    }
+  }
 }
 
 .destinations__content {
@@ -223,6 +260,7 @@
   margin-bottom: 15px;
   font-size: 55px;
   font-weight: 600;
+  font-family: Calibri;
 }
 
 .destinations__title span {
@@ -235,6 +273,7 @@
   font-size: 24px;
   font-weight: 500;
   color: var(--secondary);
+  font-family: Calibri;
 }
 
 .destinations__text p {
@@ -604,14 +643,14 @@ span.coordinates-item {
     float: none;
 
   }
-   .nav {
+  .nav {
     display: block;
     width: 100%;
     float: none;
     margin: 10px;
   }
 
-  .information-cards__title{
+  .information-cards__title {
     font-size: 30px;
     text-align: center;
   }
