@@ -9,7 +9,7 @@ export const useDescriptionStore = defineStore('description-store', {
         actions: {
             fetchDescriptionData(pageName) {
                 axios
-                    .get(`/src/database/${pageName}.json`)
+                    .get(`./public/database/${pageName}.json`)
                     .then(response => (this.descriptions = response));
             }
         }

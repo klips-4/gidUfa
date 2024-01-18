@@ -1,7 +1,7 @@
 <template>
   <main>
     <section class="destinations">
-      <div class="container-right">
+      <div class="container">
 
         <div class="destinations__row">
           <div class="destinations__content">
@@ -12,7 +12,7 @@
             <div class="destinations__text">
               <p>Уфа интересна многими историческими и археологическими памятниками, ее архитектура
                 характеризуется сочетанием разных стилей и традиций, сохранилось множество интересных памятников
-                  старины...</p>
+                старины...</p>
             </div>
 
             <a href="#!" class="destinations__btn">Читать больше</a>
@@ -22,9 +22,16 @@
             <swiper
                 class="swiper"
                 :speed="3500"
-                :slides-per-view="2"
                 :space-between="200"
                 :loop="true"
+                :breakpoints="{
+                  350: {
+                    slidesPerView: 1
+                  },
+                     480: {
+                    slidesPerView: 2
+                  }
+                }"
                 :autoplay=" {
                 delay: 2000,
                 disableOnInteraction: false,

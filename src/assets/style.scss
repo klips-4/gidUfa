@@ -210,12 +210,12 @@
 /* Destinations */
 
 .destinations {
+  display: flex;
   padding: 96px 0 100px;
   overflow-x: hidden;
 }
 
 .destinations__row {
-
   display: grid;
   //!* Три колонки *!
   grid-template-columns: auto auto;
@@ -233,20 +233,21 @@
       max-width: 100%;
       border-radius: 20px;
     }
+  }
 
-    .swiper-slide {
-      padding: 10px;
-      border-radius: 35px;
-      transition: 0.2s ease-in;
-    }
-    .swiper {
+  @media (max-width: 430px) {
+    grid-template-columns: auto;
 
+    .slide-image {
+      max-width: 100%;
+      width: 330px;
     }
   }
 }
 
 .destinations__content {
-  max-width: 456px;
+  max-width: 100%;
+  width: 350px;
 }
 
 .destinations__slider {
@@ -270,7 +271,7 @@
 .destinations__text {
 
   margin-bottom: 60px;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
   color: var(--secondary);
   font-family: Calibri;
@@ -368,8 +369,6 @@
 
 }
 
-.review__client-desc {
-}
 
 .review__client-desc-name {
   margin-bottom: 10px;
