@@ -5,10 +5,12 @@
          :key="index"
          @click="showId(item.id)"
          >
-        <h2 class="item-name">{{item}}</h2>
+        <h2 class="item-name">{{item.name}}</h2>
+        <h2 class="item-name">{{descriptionStore.descriptions.data[index].name}}</h2>
       </div>
 
-  </div>
+      </div>
+
 </template>
 
 <script setup>
