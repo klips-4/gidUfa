@@ -15,8 +15,8 @@
 </template>
 
 <script setup lang="ts">
-import {defineProps} from "vue";
 import router from "../router";
+import {defineProps} from "vue";
 
 interface Props {
   card: {
@@ -38,7 +38,7 @@ interface Props {
 }
 
 const selectPage = (page: any) => {
-  return router.push(`/descriptions/${page}`)
+  return router.push(`/listcontent/${page}`)
 }
 
 const {card} = defineProps<Props>()

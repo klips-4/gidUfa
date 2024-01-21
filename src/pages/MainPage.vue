@@ -2,7 +2,6 @@
   <Header/>
   <Content/>
   <Footer/>
-  <ListContent/>
 
 </template>
 
@@ -10,7 +9,6 @@
 
 import Header from "@/components/Header.vue";
 import Content from "@/components/Content.vue";
-import ListContent from "@/components/ListContent.vue";
 import Footer from "@/components/Footer.vue";
 </script>
 
