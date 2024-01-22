@@ -18,14 +18,14 @@
         <div class="right">
           <h2 class="item-name">{{ item.name }}</h2>
           <div class="coordinates">
-            <span class="coordinates-item">Координаты: {{ item.coordinates }}</span>
+            <span class="coordinates-item">Координаты: </span>
           </div>
         </div>
         <div class="separator"></div>
         <div class="text">
           <p>{{ item.description }}</p>
           <div class="location">
-            <span>Адрес: {{item.destination}}</span>
+            <span>Адрес: </span>
           </div>
         </div>
 

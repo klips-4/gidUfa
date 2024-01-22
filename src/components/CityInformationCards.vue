@@ -16,7 +16,6 @@
 
 <script setup lang="ts">
 import router from "../router";
-import {defineProps} from "vue";
 
 interface Props {
   card: {
