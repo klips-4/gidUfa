@@ -425,7 +425,8 @@
 }
 
 .card-info {
-  max-width: 380px;
+  max-width: 100%;
+  width: 365px;
   padding: 10px;
   overflow: auto;
   background: white;
@@ -457,8 +458,7 @@
 }
 
 .card-info__description {
-  max-width: 360px;
-  height: 180px;
+  height: 200px;
   font-size: 18px;
   font-weight: 500;
   color: var(--secondary);

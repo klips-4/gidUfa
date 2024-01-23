@@ -9,10 +9,10 @@
     </div>
     <div class="description-store">
 
-      <div v-for="(item, index) in descriptionStore.descriptions.data"
-           :key="index"
-           class="card-description">
-        <div class="thumbnail">
+      <div class="card-description">
+        <div class="thumbnail"
+
+        >
           <img :src="`./src/assets/images/fountains/${item.image}.jpg`" alt="where is the photo?" class="left">
         </div>
         <div class="right">
@@ -25,7 +25,7 @@
         <div class="text">
           <p>{{ item.description }}</p>
           <div class="location">
-            <span>Адрес: {{item.destination}}</span>
+            <span>Адрес: {{ item.destination }}</span>
           </div>
         </div>
 
@@ -37,19 +37,21 @@
 <script setup lang="ts">
 //"Подложка" для подробного описания элементов из CityInformationsCards.vue
 
+import router from "../router";
 import {useDescriptionStore} from "../store/description-store";
 import {useRoute} from "vue-router";
-import router from "../router";
+import {ref} from "vue";
 
-const route = useRoute()
-
-const descriptionStore = useDescriptionStore()
-descriptionStore.fetchDescriptionData(route.params.page)
 
 const selectPage = () => {
   return router.push(`/`)
 }
+const route = useRoute()
+const descriptionStore = useDescriptionStore()
+const item = ref([])
 
+item.value = descriptionStore.listcontent.data[route.params.page]
+console.log(item.value)
 
 </script>
 

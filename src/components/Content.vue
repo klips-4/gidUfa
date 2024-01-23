@@ -64,7 +64,7 @@
   </main>
 </template>
 
-<script setup lang="ts">
+<script setup>
 
 import {Swiper, SwiperSlide} from 'swiper/vue';
 import {Autoplay} from 'swiper/modules';
