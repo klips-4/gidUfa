@@ -11,21 +11,23 @@
 
       <div class="card-description">
         <div class="thumbnail"
-
         >
-          <img :src="`./src/assets/images/fountains/${item.image}.jpg`" alt="where is the photo?" class="left">
+          <img :src="`./src/assets/images/fountains/${descriptionStore.descriptions.data[index].image}.jpg`"
+               alt="where is the photo?" class="left">
         </div>
         <div class="right">
-          <h2 class="item-name">{{ item.name }}</h2>
+          <h2 class="item-name">{{ descriptionStore.descriptions.data[index].name }}</h2>
           <div class="coordinates">
-            <span class="coordinates-item">Координаты: {{ item.coordinates }}</span>
+            <span class="coordinates-item">Координаты: {{
+                descriptionStore.descriptions.data[index].coordinates
+              }}</span>
           </div>
         </div>
         <div class="separator"></div>
         <div class="text">
-          <p>{{ item.description }}</p>
+          <p>{{ descriptionStore.descriptions.data[index].description }}</p>
           <div class="location">
-            <span>Адрес: {{ item.destination }}</span>
+            <span>Адрес: {{ descriptionStore.descriptions.data[index].destination }}</span>
           </div>
         </div>
 
@@ -42,16 +44,18 @@ import {useDescriptionStore} from "../store/description-store";
 import {useRoute} from "vue-router";
 import {ref} from "vue";
 
+const route = useRoute()
+
+const index = ref(route.params.page.slice(-1))
+const page = ref(route.params.page.slice(0, -1))
 
 const selectPage = () => {
   return router.push(`/`)
 }
-const route = useRoute()
-const descriptionStore = useDescriptionStore()
-const item = ref([])
 
-item.value = descriptionStore.listcontent.data[route.params.page]
-console.log(item.value)
+const descriptionStore = useDescriptionStore()
+descriptionStore.fetchDescriptionData(page.value)
+
 
 </script>
 

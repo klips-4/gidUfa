@@ -5,7 +5,8 @@ import axios from "axios";
 export const useDescriptionStore = defineStore('description-store', {
         state: () => ({
             descriptions: [],
-            listcontent: []
+            listcontent: [],
+            params: []
         }),
         actions: {
             fetchDescriptionData(pageName) {
@@ -14,13 +15,17 @@ export const useDescriptionStore = defineStore('description-store', {
                     .then(response => (this.descriptions = response));
 
             },
-            fetchListContentData(pageName) {
+            async fetchListContentData(pageName) {
                 axios
-                    .get(`./database/${pageName}.json`)
+                    .get(`./public/database/${pageName}.json`)
                     .then(response => (this.listcontent = response));
-
             },
+            getParams(param) {
+                this.params = param
+
+            }
         },
 
     }
 )
+
