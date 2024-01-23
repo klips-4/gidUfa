@@ -34,11 +34,10 @@ interface Props {
       type: string
     }
   }
-
 }
 
 const selectPage = (page: any) => {
-  return router.push(`/descriptions/${page}`)
+  return router.push(`/listcontent/${page}`)
 }
 
 const {card} = defineProps<Props>()

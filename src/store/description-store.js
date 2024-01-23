@@ -4,14 +4,23 @@ import axios from "axios";
 
 export const useDescriptionStore = defineStore('description-store', {
         state: () => ({
-            descriptions: []
+            descriptions: [],
+            listcontent: []
         }),
         actions: {
             fetchDescriptionData(pageName) {
                 axios
                     .get(`./public/database/${pageName}.json`)
                     .then(response => (this.descriptions = response));
-            }
-        }
+
+            },
+            fetchListContentData(pageName) {
+                axios
+                    .get(`./database/${pageName}.json`)
+                    .then(response => (this.listcontent = response));
+
+            },
+        },
+
     }
 )
