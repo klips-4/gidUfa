@@ -6,6 +6,11 @@
         >
             {{item.name}}
         </h2>
+        <new-descriptions
+                v-for="(card, index) in ContentArray"
+                :key="index"
+                :ContentArray="card"
+        />
       </div>
 
 
@@ -16,13 +21,17 @@
 import {useDescriptionStore} from "../store/description-store";
 import {useRoute} from "vue-router";
 import router from "@/router/index.js";
+import NewDescriptions from "@/components/NewDescriptions.vue";
+
 
 const route = useRoute()
 const descriptionStore = useDescriptionStore()
 descriptionStore.fetchListContentData(route.params.page)
+const ContentArray = []
 
-const selectPageInfo = (page) => {
-    return router.push(`/new_descriptions/${page}`)
+const selectPageInfo = (index) => {
+    ContentArray.push(descriptionStore.listcontent.data[index])
+    return router.push(`/new_descriptions/${index}`)
 }
 </script>
 
