@@ -1,7 +1,7 @@
 <template>
   <div class="descriptions__wrapper">
     <div class="description-panel">
-      <button>Назад</button>
+      <button @click="selectPage">Назад</button>
     </div>
     <div class="description-content">
       <div class="description-card">
@@ -16,13 +16,25 @@
         </div>
         <div class="description-slider">
           <swiper
-              :modules="modules"
-              :space-between="50"
-              navigation
+              class="mySwiper"
+               :modules="modules"
+              :space-between="10"
+              slidesPerView="2"
+              :navigation="true"
+              :breakpoints="{
+                  480: {
+                    slidesPerView: 2
+                  },
+                   350: {
+                    slidesPerView: 1
+                  }
+              }"
           >
             <swiper-slide
-                v-for="image in images"
-            ><img :src="getImageUrl(image.img)" alt="" class="slider-images"></swiper-slide>
+                v-for="image in descriptionStore.descriptions.data[index].images"
+            >
+              <img :src="getImageUrl(image)" alt="" class="slider-images">
+            </swiper-slide>
           </swiper>
         </div>
       </div>
@@ -38,8 +50,13 @@ import {useDescriptionStore} from "../store/description-store";
 import {useRoute} from "vue-router";
 import {ref} from "vue";
 
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import {Autoplay} from "swiper/modules";
+import {Swiper, SwiperSlide} from 'swiper/vue'
+
+import {Keyboard, Navigation} from "swiper/modules";
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+
 
 
 const route = useRoute()
@@ -55,23 +72,11 @@ const descriptionStore = useDescriptionStore()
 descriptionStore.fetchDescriptionData(page.value)
 
 
-function getImageUrl(number) {
-
-    return new URL(`/src/assets/images/fountains/${number}`, import.meta.url).href
+function getImageUrl(image) {
+  return new URL(`/src/assets/images/fountains/${image}.jpg`, import.meta.url).href
 }
-const modules = [Autoplay]
 
-const images = ref([
-  {id: 1, img: '1'},
-  {id: 2, img: '2'},
-  {id: 3, img: '3'},
-  {id: 4, img: '4'},
-  {id: 5, img: '5'},
-  {id: 6, img: '6'},
-  {id: 7, img: '7'},
-  {id: 8, img: '8'},
-  {id: 9, img: '9'},
-])
+const modules = [Keyboard, Navigation]
 
 </script>
 
