@@ -499,7 +499,9 @@
 }
 
 span.s1 {
+  display: none;
   position: absolute;
+  max-width: 100%;
   top: 0;
   font-size: 15rem;
   font-weight: 800;
@@ -519,9 +521,9 @@ span.s2 {
 
 .card-description {
   position: relative;
-  height: 450px;
+
   width: 630px;
-  min-width: 630px;
+  max-width: 100%;
   margin: 60px auto;
   background-color: #FFF;
   -webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
@@ -537,6 +539,7 @@ span.s2 {
   top: -30px;
   height: 210px;
   width: 410px;
+  max-width: 100%;
   -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
@@ -562,24 +565,8 @@ img.left {
 }
 
 .description-store {
-
-  display: grid;
-  //!* Две колонки *!
-  grid-template-columns: auto auto;
-  //!* Два ряда *!
-  grid-template-rows: auto auto;
-  //!* Автоматическое размещение в ряд *!
-  grid-auto-flow: row;
-  //!* Отступы между ячейками *!
-  gap: 40px;
-  justify-content: center;
-
-  @media (max-width: 630px) {
-    grid-template-columns: auto auto;
-  }
-  @media (max-width: 1320px) {
-    grid-template-columns: auto;
-  }
+  display: flex;
+  width: 100%;
 }
 
 h2.item-name {
@@ -613,17 +600,6 @@ span.coordinates-item {
   text-align: right;
   font-size: 0.8rem;
 
-}
-
-.text {
-  margin-top: 100px;
-  padding: 0 8px 0 8px;
-  max-width: 625px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  color: #3C4447
 }
 
 .location {
