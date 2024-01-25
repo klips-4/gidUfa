@@ -13,7 +13,7 @@
 
 <style lang="scss" scoped>
 .footer__wrapper {
-  height: 130px;
+  height: 90px;
 
   background: aliceblue;
 }

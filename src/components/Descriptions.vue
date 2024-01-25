@@ -9,7 +9,10 @@
           <div class="description-image">
             <img :src="`./src/assets/images/fountains/${descriptionStore.descriptions.data[index].image}.jpg`" alt="">
           </div>
-          <div class="description-name">{{ descriptionStore.descriptions.data[index].name }}</div>
+          <div class="description-right">
+            <div class="description-name"><h2>{{ descriptionStore.descriptions.data[index].name }}</h2></div>
+            <div class="separator"></div>
+          </div>
         </div>
         <div class="text">
           <p>{{ descriptionStore.descriptions.data[index].description }}</p>
@@ -17,8 +20,8 @@
         <div class="description-slider">
           <swiper
               class="mySwiper"
-               :modules="modules"
-              :space-between="10"
+              :modules="modules"
+              :space-between="5"
               slidesPerView="2"
               :navigation="true"
               :breakpoints="{
@@ -35,7 +38,29 @@
             >
               <img :src="getImageUrl(image)" alt="" class="slider-images">
             </swiper-slide>
+
           </swiper>
+          <div class="separator"></div>
+        </div>
+        <div class="location">
+          <div class="location-address"><span>Адрес: </span></div>
+          <div class="location-address-name">
+            <span>
+            {{ descriptionStore.descriptions.data[index].destination }}
+          </span>
+          </div>
+        </div>
+        <div class="description-service">
+          <div class="invalid" data-title="Предусмотрено оборудование для людей с ограниченными возможостями"
+          v-if="descriptionStore.descriptions.data[index].invalid"
+          >
+            <img src="/src/assets/images/special/invalid.png" alt="">
+          </div>
+          <div class="wc" data-title="Предусмотрен туалет"
+               v-if="descriptionStore.descriptions.data[index].wc"
+          >
+            <img src="/src/assets/images/special/wc.png" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -56,7 +81,7 @@ import {Keyboard, Navigation} from "swiper/modules";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-
+import {createLogger} from "vite";
 
 
 const route = useRoute()
