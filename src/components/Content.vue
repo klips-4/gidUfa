@@ -22,7 +22,7 @@
             <swiper
                 class="swiper"
                 :speed="3500"
-                :space-between="5"
+                :space-between="140"
                 :loop="true"
                 :breakpoints="{
                   350: {

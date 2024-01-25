@@ -4,7 +4,7 @@
     <div v-for="(item, index) in descriptionStore.listcontent.data"
          :key="index"
     >
-      <h2 @click="getItem(route.params.page + index)" class="item-name">{{ item.name }}</h2>
+      <h2 @click="getItem(route.params.page+ index)" class="item-name">{{ item.name }}</h2>
     </div>
   </div>
 </template>
