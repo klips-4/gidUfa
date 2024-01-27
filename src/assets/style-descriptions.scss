@@ -1,8 +1,10 @@
 .descriptions__wrapper {
   background: rgba(1, 19, 19, .68);
   width: 100%;
+  min-height: 100vh;
   max-width: 1270px;
   margin: 0 auto;
+  position: relative;
 }
 
 .description-panel {
@@ -12,6 +14,7 @@
 }
 
 .description-card {
+  z-index: 5;
   background: #eceaea;
   max-width: 800px;
   width: 100%;
@@ -45,6 +48,8 @@
 
 .description-name {
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
   @media (max-width: 650px) {
     display: flex;
     justify-content: center;
@@ -53,9 +58,10 @@
 }
 
 .description-content {
+
   display: flex;
   justify-content: center;
-  align-items: center;
+
   padding: 20px;
 }
 
@@ -79,12 +85,13 @@
   height: 215px;
   max-width: 100%;
   padding: 10px;
+  margin-bottom: 10px;
 }
 
 .description-service {
   display: flex;
+  justify-content: center;
   height: 50px;
-  margin-left: 5px;
 }
 
 .separator {
@@ -92,16 +99,16 @@
   border: 1px solid #C3C3C3;
 }
 
-.invalid img, .wc img {
-  width: 30px;
+.invalid img, .wc img, .food img {
+  width: 25px;
   margin: 10px;
 }
 
-.invalid, .wc {
+.invalid, .wc, .food {
   position: relative;
 }
 
-.invalid:hover::after, .wc:hover::after  {
+.invalid:hover::after, .wc:hover::after, .food:hover::after   {
   content: attr(data-title);
   position: absolute;
   z-index: 1;

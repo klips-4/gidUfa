@@ -1,17 +1,46 @@
 <template>
   <div class="descriptions__wrapper">
+    <div class="fond">
+      <span class="s1">ГИД</span>
+      <span class="s2">УФА</span>
+    </div>
     <div class="description-panel">
-      <button @click="selectPage">Назад</button>
+      <button @click="selectPage(page)">Назад</button>
     </div>
     <div class="description-content">
       <div class="description-card">
         <div class="description-card__header">
           <div class="description-image">
-            <img :src="`./src/assets/images/fountains/${descriptionStore.descriptions.data[index].image}.jpg`" alt="">
+            <img :src="`./src/assets/images/${page}/${descriptionStore.descriptions.data[index].image}.jpg`" alt="">
           </div>
           <div class="description-right">
             <div class="description-name"><h2>{{ descriptionStore.descriptions.data[index].name }}</h2></div>
             <div class="separator"></div>
+            <div class="location">
+              <div class="location-address"><span>Адрес: </span></div>
+              <div class="location-address-name">
+            <span>
+            {{ descriptionStore.descriptions.data[index].destination }}
+          </span>
+              </div>
+            </div>
+            <div class="description-service">
+              <div class="invalid" data-title="Предусмотрено оборудование для людей с ограниченными возможостями"
+                   v-if="descriptionStore.descriptions.data[index].invalid"
+              >
+                <img src="/src/assets/images/special/invalid.png" alt="">
+              </div>
+              <div class="wc" data-title="Предусмотрен туалет"
+                   v-if="descriptionStore.descriptions.data[index].wc"
+              >
+                <img src="/src/assets/images/special/wc.png" alt="">
+              </div>
+              <div class="food" data-title="Предусмотрены места для питания"
+                   v-if="descriptionStore.descriptions.data[index].food"
+              >
+                <img src="/src/assets/images/special/food.png" alt="">
+              </div>
+            </div>
           </div>
         </div>
         <div class="text">
@@ -20,6 +49,7 @@
         <div class="description-slider">
           <swiper
               class="mySwiper"
+              :pagination="true"
               :modules="modules"
               :space-between="5"
               slidesPerView="2"
@@ -40,27 +70,6 @@
             </swiper-slide>
 
           </swiper>
-          <div class="separator"></div>
-        </div>
-        <div class="location">
-          <div class="location-address"><span>Адрес: </span></div>
-          <div class="location-address-name">
-            <span>
-            {{ descriptionStore.descriptions.data[index].destination }}
-          </span>
-          </div>
-        </div>
-        <div class="description-service">
-          <div class="invalid" data-title="Предусмотрено оборудование для людей с ограниченными возможостями"
-          v-if="descriptionStore.descriptions.data[index].invalid"
-          >
-            <img src="/src/assets/images/special/invalid.png" alt="">
-          </div>
-          <div class="wc" data-title="Предусмотрен туалет"
-               v-if="descriptionStore.descriptions.data[index].wc"
-          >
-            <img src="/src/assets/images/special/wc.png" alt="">
-          </div>
         </div>
       </div>
     </div>
@@ -77,20 +86,22 @@ import {ref} from "vue";
 
 import {Swiper, SwiperSlide} from 'swiper/vue'
 
-import {Keyboard, Navigation} from "swiper/modules";
+import {Navigation} from "swiper/modules";
+import { Pagination } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import {createLogger} from "vite";
+import 'swiper/css/pagination';
 
 
 const route = useRoute()
 
 const index = ref(route.params.page.slice(-1))
+
 const page = ref(route.params.page.slice(0, -1))
 
-const selectPage = () => {
-  return router.push(`/`)
+const selectPage = (index) => {
+  return router.push(`/listcontent/${index}`)
 }
 
 const descriptionStore = useDescriptionStore()
@@ -101,7 +112,7 @@ function getImageUrl(image) {
   return new URL(`/src/assets/images/fountains/${image}.jpg`, import.meta.url).href
 }
 
-const modules = [Keyboard, Navigation]
+const modules = [Navigation,Pagination]
 
 </script>
 

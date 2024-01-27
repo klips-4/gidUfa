@@ -499,14 +499,15 @@
 }
 
 span.s1 {
-  display: none;
+
   position: absolute;
   max-width: 100%;
   top: 0;
-  font-size: 15rem;
+  font-size: 6rem;
   font-weight: 800;
   text-transform: uppercase;
   color: #3C4447;
+  z-index: 1;
 }
 
 span.s2 {
@@ -514,9 +515,10 @@ span.s2 {
   position: absolute;
   bottom: 0;
   right: 0;
-  font-size: 15rem;
+  font-size: 8rem;
   text-transform: uppercase;
   color: #3C4447;
+  z-index: 1;
 }
 
 .card-description {
@@ -609,6 +611,7 @@ span.coordinates-item {
   justify-content: left;
   margin-top: 10px;
   margin-left: 15px;
+  margin-bottom: 10px;
 
   @media (max-width: 650px) {
     display: flex;
