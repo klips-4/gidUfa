@@ -11,30 +11,31 @@
     </div>
     <div class="btn__group"><a @click="selectPage(card.page)" class="descriptions__btn">Подробнее...</a></div>
   </div>
-
 </template>
 
 <script setup lang="ts">
 import {defineProps} from "vue";
 import router from "../router";
 
+
 interface Props {
-  card: {
-    type: any
-    page: {
-      type: string
+    card: {
+        type: any
+        page: {
+            type: string
+        }
+        img: {
+            type: string
+        }
+        title: {
+            type: string
+        }
+        description: {
+            type: string
+        }
     }
-    img: {
-      type: string
-    }
-    title: {
-      type: string
-    }
-    description: {
-      type: string
-    }
-  }
 }
+
 
 const selectPage = (page: any) => {
   return router.push(`/listcontent/${page}`)
