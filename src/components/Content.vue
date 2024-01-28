@@ -58,11 +58,14 @@
             v-for="(card, index) in cardsInfo"
             :key="index"
             :card="card"
+            a="Привет"
         />
       </div>
     </section>
   </main>
 </template>
+
+
 
 <script setup>
 
@@ -74,6 +77,7 @@ import {ref} from "vue";
 import 'swiper/css';
 import 'swiper/css/autoplay'
 import CityInformationCards from "./CityInformationCards.vue";
+
 
 
 function getImageUrl(name) {
