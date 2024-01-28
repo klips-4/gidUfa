@@ -15,15 +15,24 @@
                     </nav>
                 </div>
             </div>
-                    <h1 class="title">{{title}}</h1>
-                <el-scrollbar height="500px">
-                    <div class="crypto_list"><span class="scrollbar-demo-item"
+            <div class="title_wrapper">
+                <h1 class="title">{{title}}</h1>
+                <div class="searchInput">
+                    <el-input placeholder="Введите название" v-model.trim="input" />
+                </div>
+            </div>
+
+                    <div class="crypto_list">
+                        <span v-if="visible" class="scrollbar-demo-item"
                                                    v-for="(item, index) in descriptionStore.listcontent.data"
                                                    :key="index"
                                                    @click="getItem(route.params.page+ index)"
                     >{{ item.name }}</span>
+                        <span class="scrollbar-demo-item" v-if="!visible"
+                           @click="getItem(route.params.page + (item.id-1))"
+                         >{{item.name}}</span>
                     </div>
-                </el-scrollbar>
+
 
         </header>
         </div>
@@ -36,6 +45,8 @@ import {useDescriptionStore} from "../store/description-store";
 import {useRoute} from "vue-router";
 import router from "@/router/index.js";
 import Header from "@/components/Header.vue";
+import { useDebounce,  } from '@vueuse/core'
+import {ref, watch} from "vue";
 
 const route = useRoute()
 
@@ -47,9 +58,20 @@ const List_Title = {
     museums: 'Музеи'
 }
 const title = List_Title[route.params.page]
+const visible = ref(true)
+
+const input = ref('')
+const search = useDebounce(input, 1000)
+const item = ref()
 
 
-
+watch(search, () => {
+    item.value = descriptionStore.listcontent.data.find(o => o.name.toLowerCase() === search.value.toLowerCase())
+    if (item.value != undefined) {
+        visible.value = false
+    }
+    else visible.value = true
+});
 
 const getItem = (index) => {
   return router.push(`/descriptions/${index}`)
@@ -59,9 +81,12 @@ const getItem = (index) => {
 
 <style lang="scss" scoped>
 
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Calligraffitti&display=swap');
-
-.title{
+.title_wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.title {
     font-family: 'Calligraffitti', cursive;
     font-weight: 100;
     font-size: 60px;
@@ -71,6 +96,11 @@ const getItem = (index) => {
     text-shadow: 5px 5px 0px #fd624d;
 }
 
+.searchInput{
+    width: 40vw;
+    margin: 10px;
+    align-content: center;
+}
 
 .header_listcontent {
     overflow: hidden;
