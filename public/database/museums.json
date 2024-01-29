@@ -13,7 +13,8 @@
     "food": true,
     "description": "Своё название ",
     "destination": "ул. Комарова ",
-    "website": "https://rmbs-ufa.ru/ "
+    "website": "https://rmbs-ufa.ru/ ",
+    "address": "г. Уфа, ул. Комарова, д.7"
   },
   {
     "id": 2,
@@ -29,7 +30,8 @@
     "food": true,
     "description": "Своё название ",
     "destination": "ул. Комарова ",
-    "website": "https://site/"
+    "website": "https://site/",
+    "address": "г. Уфа, ул. Зайнуллы Расулева, 4"
   },
   {
     "id": 3,
@@ -45,6 +47,7 @@
     "food": true,
     "description": "Своё название ",
     "destination": "ул. Комарова ",
-    "website": "https://site/"
+    "website": "https://site/",
+    "address": "г. Уфа, ул. Советская 14"
   }
 ]

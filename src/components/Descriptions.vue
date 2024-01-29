@@ -5,9 +5,10 @@
       <span class="s2">УФА</span>
     </div>
     <div class="description-panel">
-      <button @click="selectPage(page)">Назад</button>
+      <div @click="selectPage(page)" class="button_back">Вернуться к списку</div>
     </div>
     <div class="description-content">
+
       <div class="description-card">
         <div class="description-card__header">
           <div class="description-image">
@@ -17,15 +18,32 @@
             <div class="description-name"><h2>{{ descriptionStore.descriptions.data[index].name }}</h2></div>
             <div class="separator"></div>
             <div class="location">
-              <div class="location-address"><span>
-                  Адрес: </span></div>
-                <div class="location-address"><span>Координаты: </span></div>
-                <div class="location-address"><span v-if=" 'website' in descriptionStore.descriptions.data[index]">
-                    Сайт: </span></div>
-              <div class="location-address-name">
-            <span>
+              <div v-if="descriptionStore.descriptions.data[index].coordinates" class="location-address">
+                <div class="coordinates">
+                       <span>
+                  Координаты:
+                </span>
+                  <span>
              {{ descriptionStore.descriptions.data[index].coordinates }}
           </span>
+                </div>
+              </div>
+              <div v-else class="location-address">
+
+                <div class="address">
+                     <span>
+                  Адрес:
+                </span>
+                  <span>
+             {{ descriptionStore.descriptions.data[index].address }}
+          </span>
+                </div>
+                <div class="website">
+                  <span>Сайт: </span>
+                  <span>
+             {{ descriptionStore.descriptions.data[index].website }}
+          </span>
+                </div>
               </div>
             </div>
             <div class="description-service">
@@ -91,7 +109,7 @@ import {ref} from "vue";
 import {Swiper, SwiperSlide} from 'swiper/vue'
 
 import {Navigation} from "swiper/modules";
-import { Pagination } from 'swiper/modules';
+import {Pagination} from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -103,6 +121,8 @@ const route = useRoute()
 const index = ref(route.params.page.slice(-1))
 
 const page = ref(route.params.page.slice(0, -1))
+
+const indexTask = ref(0)
 
 const selectPage = (index) => {
   return router.push(`/listcontent/${index}`)
@@ -116,7 +136,7 @@ function getImageUrl(image) {
   return new URL(`/src/assets/images/fountains/${image}.jpg`, import.meta.url).href
 }
 
-const modules = [Navigation,Pagination]
+const modules = [Navigation, Pagination]
 
 </script>
 
