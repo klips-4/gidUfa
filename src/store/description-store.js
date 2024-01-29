@@ -20,10 +20,6 @@ export const useDescriptionStore = defineStore('description-store', {
                     .get(`./public/database/${pageName}.json`)
                     .then(response => (this.listcontent = response));
             },
-            getParams(param) {
-                this.params = param
-
-            }
         },
 
     }
