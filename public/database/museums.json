@@ -10,7 +10,6 @@
     "invalid": true,
     "wc": false,
     "food": true,
-    "coordinates": "54.723427, 55.945142",
     "description": "Своё название ",
     "destination": "ул. Комарова ",
     "website": "https://rmbs-ufa.ru/ "
@@ -26,7 +25,6 @@
     "invalid": true,
     "wc": false,
     "food": true,
-    "coordinates": "54.723427, 55.945142",
     "description": "Своё название ",
     "destination": "ул. Комарова ",
     "website": "https://site/"
@@ -42,7 +40,6 @@
     "invalid": true,
     "wc": false,
     "food": true,
-    "coordinates": "54.723427, 55.945142",
     "description": "Своё название ",
     "destination": "ул. Комарова ",
     "website": "https://site/"
