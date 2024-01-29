@@ -2,20 +2,49 @@
   {
     "id": 1,
     "name": "Республиканский музей Боевой Славы",
-    "image": 1,
+    "image":[
+      1.1,
+      1.2,
+      1.3
+    ],
+    "invalid": true,
+    "wc": false,
+    "food": true,
     "coordinates": "54.723427, 55.945142",
-    "description": "Своё название "
+    "description": "Своё название ",
+    "destination": "ул. Комарова ",
+    "website": "https://rmbs-ufa.ru/ "
   },
   {
     "id": 2,
-    "name": "Мемориальный дом-музей С.Т. Аксакова"
+    "name": "Мемориальный дом-музей С.Т. Аксакова",
+    "image": [
+      2.1,
+      2.2,
+      2.3
+    ],
+    "invalid": true,
+    "wc": false,
+    "food": true,
+    "coordinates": "54.723427, 55.945142",
+    "description": "Своё название ",
+    "destination": "ул. Комарова ",
+    "website": "https://site/"
   },
   {
     "id": 3,
-    "name": "Национальный музей Республики Башкортостан"
-  },
-  {
-    "id": 4,
-    "name": "Музей Археологии и Этнографии УНЦ РАН"
+    "name": "Национальный музей Республики Башкортостан",
+    "image": [
+      3.1,
+      3.2,
+      3.3
+    ],
+    "invalid": true,
+    "wc": false,
+    "food": true,
+    "coordinates": "54.723427, 55.945142",
+    "description": "Своё название ",
+    "destination": "ул. Комарова ",
+    "website": "https://site/"
   }
 ]

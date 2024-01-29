@@ -18,7 +18,7 @@
             <div class="title_wrapper">
                 <h1 class="title">{{title}}</h1>
                 <div class="searchInput">
-                    <el-input placeholder="Введите название" v-model.trim="input" />
+                    <el-input placeholder="Введите название" v-model.trim="input"/>
                 </div>
             </div>
 
@@ -52,6 +52,7 @@ const route = useRoute()
 
 const descriptionStore = useDescriptionStore()
 descriptionStore.fetchListContentData(route.params.page)
+
 
 const List_Title = {
     fountains: 'Фонтаны',

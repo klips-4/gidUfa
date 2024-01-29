@@ -20,7 +20,7 @@
               <div class="location-address"><span>Адрес: </span></div>
               <div class="location-address-name">
             <span>
-            {{ descriptionStore.descriptions.data[index].destination }}
+            {{ descriptionStore.descriptions.data[index].coordinates }}
           </span>
               </div>
             </div>
