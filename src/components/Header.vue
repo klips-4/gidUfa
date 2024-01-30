@@ -2,16 +2,7 @@
   <header class="header">
     <div class="container">
       <div class="header__top">
-        <nav class="nav">
-          <div class="nav__logo">
-            <h2 class="logo"><strong><a href="#!">ГидУФА</a></strong></h2>
-          </div>
-          <ul class="nav__list">
-            <li><strong><a href="#!" >История Уфы</a></strong></li>
-            <li><strong><a href="#!">Достопримечательности</a></strong></li>
-            <li><strong><a href="#!">О нас</a></strong></li>
-          </ul>
-        </nav>
+        <Navbar/>
       </div>
       <div class="header__row">
         <div class="header__content">
@@ -32,6 +23,7 @@
 
 <script setup>
 
+import Navbar from "@/components/Navbar.vue";
 </script>
 
 <style lang="scss">
