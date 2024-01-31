@@ -21,7 +21,6 @@ export const useDescriptionStore = defineStore('description-store', {
                     .then(response => (this.listcontent = response));
             },
         },
-
     }
 )
 

@@ -7,39 +7,36 @@
         </div>
       </div>
       <div class="title_wrapper">
-        <h1 class="title">{{title}}</h1>
+        <h1 class="title">{{ title }}</h1>
         <div class="searchInput">
           <el-input placeholder="Введите название" v-model.trim="input"/>
         </div>
       </div>
-
       <div class="crypto_list">
                         <span v-if="visible" class="scrollbar-demo-item"
                               v-for="(item, index) in descriptionStore.listcontent.data"
                               :key="index"
                               @click="getItem(route.params.page+ index)"
+
                         >{{ item.name }}</span>
         <span class="scrollbar-demo-item" v-if="!visible"
               @click="getItem(route.params.page + (item.id-1))"
-        >{{item.name}}</span>
+        >{{ item.name }}</span>
       </div>
-
-
     </header>
   </div>
-
-</template>
-
+</template> "
 <script setup>
 
 import {useDescriptionStore} from "../store/description-store";
 import {useRoute} from "vue-router";
-import router from "@/router/index.js";
-import { useDebounce,  } from '@vueuse/core'
+
+import {useDebounce,} from '@vueuse/core'
 import {ref, watch} from "vue";
 import Navbar from "@/components/Navbar.vue";
 
 const route = useRoute()
+import router from "@/router/index.js";
 
 const descriptionStore = useDescriptionStore()
 descriptionStore.fetchListContentData(route.params.page)
@@ -61,34 +58,39 @@ watch(search, () => {
   item.value = descriptionStore.listcontent.data.find(o => o.name.toLowerCase() === search.value.toLowerCase())
   if (item.value != undefined) {
     visible.value = false
-  }
-  else visible.value = true
+  } else visible.value = true
 });
 
 const getItem = (index) => {
   return router.push(`/descriptions/${index}`)
 }
 
+
 </script>
 
 <style lang="scss" scoped>
+
+.description-none {
+  display: none;
+}
 
 .title_wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+
 .title {
   font-family: 'Calligraffitti', cursive;
   font-weight: 100;
   font-size: 60px;
   letter-spacing: 0.02em;
   text-align: center;
-  color:  #fcfbfa;
+  color: #fcfbfa;
   text-shadow: 5px 5px 0px #fd624d;
 }
 
-.searchInput{
+.searchInput {
   width: 40vw;
   margin: 10px;
   align-content: center;
@@ -108,9 +110,10 @@ const getItem = (index) => {
   margin-bottom: 30px;
 }
 
-h1{
+h1 {
   text-align: center;
 }
+
 .crypto_list {
   margin-top: 10px;
   margin-bottom: 30px;
@@ -126,6 +129,7 @@ h1{
     cursor: pointer;
   }
 }
+
 .scrollbar-demo-item {
   display: flex;
   align-items: center;
@@ -138,7 +142,7 @@ h1{
   cursor: pointer;
 }
 
-.scrollbar-demo-item:hover{
+.scrollbar-demo-item:hover {
   color: #e38138;
 }
 
@@ -147,6 +151,7 @@ h1{
   margin-top: 30px;
   font-weight: bold;
 }
+
 .back:hover {
   color: #ad1818;
 }

@@ -7,8 +7,8 @@
     <div class="description-panel">
       <div @click="selectPage(page)" class="button_back">Вернуться к списку</div>
     </div>
-    <div class="description-content">
 
+    <div class="description-content" >
       <div class="description-card">
         <div class="description-card__header">
           <div class="description-image">
@@ -90,7 +90,6 @@
             >
               <img :src="getImageUrl(image)" alt="" class="slider-images">
             </swiper-slide>
-
           </swiper>
         </div>
       </div>
@@ -116,13 +115,12 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 
+const toggle = ref(false)
 const route = useRoute()
 
 const index = ref(route.params.page.slice(-1))
 
 const page = ref(route.params.page.slice(0, -1))
-
-const indexTask = ref(0)
 
 const selectPage = (index) => {
   return router.push(`/listcontent/${index}`)
@@ -137,6 +135,8 @@ function getImageUrl(image) {
 }
 
 const modules = [Navigation, Pagination]
+
+
 
 </script>
 
