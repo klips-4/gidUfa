@@ -3,16 +3,7 @@
         <header class="header_listcontent">
             <div class="container">
                 <div class="header__top_listcontent">
-                    <nav class="nav">
-                        <div class="nav__logo">
-                            <h2 class="logo"><strong><a href="#">ГидУФА</a></strong></h2>
-                        </div>
-                        <ul class="nav__list">
-                            <li><strong><a href="#!" >История Уфы</a></strong></li>
-                            <li><strong><a href="#!">Достопримечательности</a></strong></li>
-                            <li><strong><a href="#!">О нас</a></strong></li>
-                        </ul>
-                    </nav>
+                   <Navbar/>
                 </div>
             </div>
             <div class="title_wrapper">
@@ -44,9 +35,9 @@
 import {useDescriptionStore} from "../store/description-store";
 import {useRoute} from "vue-router";
 import router from "@/router/index.js";
-import Header from "@/components/Header.vue";
 import { useDebounce,  } from '@vueuse/core'
 import {ref, watch} from "vue";
+import Navbar from "@/components/Navbar.vue";
 
 const route = useRoute()
 
@@ -114,11 +105,7 @@ const getItem = (index) => {
 }
 
 .header__top_listcontent {
-    margin-bottom: 50px;
-}
-a{
-    color: white;
-    text-decoration: none;
+    margin-bottom: 30px;
 }
 
 h1{
