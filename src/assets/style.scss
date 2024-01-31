@@ -591,24 +591,13 @@ button.btn-prev {
   cursor: pointer;
 }
 
-.coordinates {
-  height: 30px;
-  width: auto;
-}
 
-span.coordinates-item {
-  padding-top: 8px;
-  margin-right: 6px;
-  text-align: right;
-  font-size: 0.8rem;
-
-}
 
 .location {
   color: black;
   font-weight: 700;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   margin-top: 10px;
   margin-left: 15px;
   margin-bottom: 10px;
