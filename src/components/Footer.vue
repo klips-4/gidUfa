@@ -14,7 +14,6 @@
 <style lang="scss" scoped>
 .footer__wrapper {
   height: 90px;
-
   background: aliceblue;
 }
 
@@ -27,7 +26,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 20px;
+    background: aliceblue;
+    padding-bottom: 30px;
 
   }
 }
