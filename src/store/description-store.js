@@ -6,7 +6,7 @@ export const useDescriptionStore = defineStore('description-store', {
         state: () => ({
             descriptions: [],
             listcontent: [],
-            params: []
+
         }),
         actions: {
             fetchDescriptionData(pageName) {
@@ -21,6 +21,12 @@ export const useDescriptionStore = defineStore('description-store', {
                     .then(response => (this.listcontent = response));
             },
         },
+        getters: {
+            getInfoByIndex: (state) => {
+
+                return (index) => state.descriptions.data[index]
+            }
+        }
     }
 )
 

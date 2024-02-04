@@ -32,7 +32,7 @@ import {useDescriptionStore} from "../store/description-store";
 import {useRoute} from "vue-router";
 
 import {useDebounce,} from '@vueuse/core'
-import {ref, watch} from "vue";
+import {onBeforeMount, ref, watch} from "vue";
 import Navbar from "@/components/Navbar.vue";
 
 const route = useRoute()
@@ -61,9 +61,12 @@ watch(search, () => {
   } else visible.value = true
 });
 
-const getItem = (index) => {
+
+function getItem (index) {
   return router.push(`/descriptions/${index}`)
 }
+
+
 
 
 </script>

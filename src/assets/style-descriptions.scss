@@ -148,3 +148,28 @@
   cursor: pointer;
 }
 
+.prevSlide, .nextSlide {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 70px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+
+  background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%), #ffffff;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.prevSlide span, .nextSlide span {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+.buttons-console {
+  display: flex;
+  justify-content: space-around;
+}
+
