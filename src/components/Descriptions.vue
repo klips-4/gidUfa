@@ -8,7 +8,8 @@
       <div @click="selectPage(page)" class="button_back">Вернуться к списку</div>
     </div>
 
-    <div class="description-content" >
+    <div class="description-content">
+
       <div class="description-card">
         <div class="description-card__header">
           <div class="description-image">
@@ -29,7 +30,6 @@
                 </div>
               </div>
               <div v-else class="location-address">
-
                 <div class="address">
                      <span>
                   Адрес:
@@ -92,9 +92,15 @@
             </swiper-slide>
           </swiper>
         </div>
+        <div class="buttons-console">
+          <div @click="prevSlide" class="prevSlide"><span>Назад</span></div>
+          <div @click="nextSlide" class="nextSlide"><span>Вперед</span></div>
+        </div>
       </div>
+
     </div>
   </div>
+
 </template>
 
 <script setup lang="ts">
@@ -115,7 +121,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 
-const toggle = ref(false)
 const route = useRoute()
 
 const index = ref(route.params.page.slice(-1))
@@ -131,11 +136,27 @@ descriptionStore.fetchDescriptionData(page.value)
 
 
 function getImageUrl(image) {
-  return new URL(`/src/assets/images/fountains/${image}.jpg`, import.meta.url).href
+  return new URL(`/src/assets/images/${page.value}/${image}.jpg`, import.meta.url).href
+}
+
+
+const prevSlide = () => {
+  if (index.value <= 0) {
+    index.value = String(descriptionStore.descriptions.data.length - 1)
+    return index.value
+  }
+  return index.value--
+}
+
+const nextSlide = () => {
+  if (index.value >= descriptionStore.descriptions.data.length - 1) {
+    index.value = String(0)
+    return index.value
+  }
+  return index.value++
 }
 
 const modules = [Navigation, Pagination]
-
 
 
 </script>
