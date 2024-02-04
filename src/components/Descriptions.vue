@@ -10,6 +10,7 @@
 
     <div class="description-content">
 
+      <div @click="prevSlide" class="prevSlide"><img src="../assets/images/prev.png" alt=""></div>
       <div class="description-card">
         <div class="description-card__header">
           <div class="description-image">
@@ -17,7 +18,11 @@
           </div>
           <div class="description-right">
             <div class="description-name"><h2>{{ descriptionStore.descriptions.data[index].name }}</h2></div>
+            <div class="separator-block">
+              <div @click="prevSlide"><img src="../assets/images/prev.png" alt=""></div>
             <div class="separator"></div>
+              <div @click="nextSlide"><img src="../assets/images/next.png" alt=""></div>
+            </div>
             <div class="location">
               <div v-if="descriptionStore.descriptions.data[index].coordinates" class="location-address">
                 <div class="coordinates">
@@ -92,12 +97,8 @@
             </swiper-slide>
           </swiper>
         </div>
-        <div class="buttons-console">
-          <div @click="prevSlide" class="prevSlide"><span>Назад</span></div>
-          <div @click="nextSlide" class="nextSlide"><span>Вперед</span></div>
-        </div>
       </div>
-
+      <div @click="nextSlide" class="nextSlide"><img src="../assets/images/next.png" alt=""></div>
     </div>
   </div>
 
