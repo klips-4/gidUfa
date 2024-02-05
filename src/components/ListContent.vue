@@ -7,8 +7,7 @@
         </div>
       </div>
       <div class="title_wrapper">
-        <h1 class="title">{{ Category[route.params.page]}}</h1>
-          <button @click="next(Category.id)">next</button>
+        <h1 class="title">{{Title}}</h1>
         <div class="searchInput">
           <el-input placeholder="Введите название" v-model="input"/>
         </div>
@@ -22,7 +21,7 @@
                         >{{ item.name }}</span>
         <span class="scrollbar-demo-item" v-if="!visible"
               @click="getItem(route.params.page + (item.id-1))"
-        >{{ item1.value}}</span>
+        >{{ item.name}}</span>
       </div>
     </header>
   </div>
@@ -33,7 +32,7 @@ import {useDescriptionStore} from "../store/description-store";
 import {useRoute} from "vue-router";
 
 import {useDebounce,} from '@vueuse/core'
-import {nextTick, ref, watch} from "vue";
+import {ref, watch} from "vue";
 import Navbar from "@/components/Navbar.vue";
 
 const route = useRoute()
@@ -43,38 +42,22 @@ const descriptionStore = useDescriptionStore()
 descriptionStore.fetchListContentData(route.params.page)
 
 
-const List_Title = [{
+const List_Title = {
   fountains: 'Фонтаны',
-  id: 1},
-    {
-  museums: 'Музеи',
-    id: 2
-}]
-const Category = ref()
-List_Title.find((element)=>{
-    if(element[route.params.page]!==element.includes)
-      return Category.value = element
-})
-
-const next = (id) => {
-    List_Title.find((element)=>{
-        if(element.id === id + 1)
-            router.push(`/listcontent/${Object.keys(element)[0]}`)
-    })
-
+  museums: 'Музеи'
 }
+const Title = ref(List_Title[route.params.page])
 const visible = ref(true)
 
 const input = ref('')
 const search = useDebounce(input, 1000)
 const item = ref()
-const item1 = ref(1)
 
 
 watch(search, () => {
   item.value = descriptionStore.listcontent.data.find(o => o.name.toLowerCase() === search.value.toLowerCase())
   if (item.value != undefined) {
-    visible.value = false
+      visible.value = false
   } else visible.value = true
 });
 

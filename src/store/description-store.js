@@ -26,10 +26,6 @@ export const useDescriptionStore = defineStore('description-store', {
 
                 return (index) => state.descriptions.data[index]
             },
-            getListByIndex: (state) => {
-
-                return (index) => state.listcontent.data[index]
-            },
         }
     }
 )
