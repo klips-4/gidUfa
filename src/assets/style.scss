@@ -240,7 +240,8 @@
 
     .slide-image {
       max-width: 100%;
-      width: 330px;
+      width: 340px;
+      height: 300px;
     }
   }
 }
@@ -271,7 +272,7 @@
 .destinations__text {
 
   margin-bottom: 60px;
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 500;
   color: var(--secondary);
   font-family: Calibri;
@@ -280,6 +281,7 @@
 .destinations__text p {
 
   text-align: justify;
+  width: 340px;
 }
 
 .destinations__btn {
