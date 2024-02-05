@@ -40,7 +40,6 @@
             >
               <swiper-slide
                   v-for="slide in sliders"
-
               >
                 <img class="slide-image" :src="getImageUrl(slide.img)" alt="">
               </swiper-slide>
