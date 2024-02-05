@@ -9,14 +9,14 @@ export const useDescriptionStore = defineStore('description-store', {
 
         }),
         actions: {
-            fetchDescriptionData(pageName) {
-                axios
+            async fetchDescriptionData(pageName) {
+                await axios
                     .get(`./public/database/${pageName}.json`)
                     .then(response => (this.descriptions = response));
 
             },
             async fetchListContentData(pageName) {
-                axios
+                await axios
                     .get(`./public/database/${pageName}.json`)
                     .then(response => (this.listcontent = response));
             },
@@ -25,7 +25,11 @@ export const useDescriptionStore = defineStore('description-store', {
             getInfoByIndex: (state) => {
 
                 return (index) => state.descriptions.data[index]
-            }
+            },
+            getListByIndex: (state) => {
+
+                return (index) => state.listcontent.data[index]
+            },
         }
     }
 )

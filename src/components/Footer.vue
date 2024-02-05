@@ -1,9 +1,8 @@
 <template>
   <div class="footer__wrapper">
     <div class="footer-container">
-      <div class="name"><span>АНО "ПРОБИЗНЕС"</span></div>
-      <div class="address"><span>г.Уфа, ул. Менделеева 1</span></div>
-      <div class="mail"><span>probusiness@mail.ru</span></div>
+      <div class="name"><span>Проект реализуется на средства гранта главы Администарции ГО г.Уфа РБ</span></div>
+      <div class="address"><span>При поддержке АНО "ПРОБИЗНЕС"</span></div>
     </div>
   </div>
 </template>
