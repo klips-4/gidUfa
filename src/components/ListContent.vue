@@ -12,7 +12,9 @@
           <el-input placeholder="Введите название" v-model="input"/>
         </div>
       </div>
+        <div class="list_wrapper" id="element">
       <div class="crypto_list">
+
                         <span v-if="visible" class="scrollbar-demo-item"
                               v-for="(item, index) in descriptionStore.listcontent.data"
                               :key="item.name"
@@ -23,6 +25,7 @@
               @click="getItem(route.params.page + (item.id-1))"
         >{{ item.name}}</span>
       </div>
+        </div>
     </header>
   </div>
 </template> "
@@ -70,6 +73,12 @@ const getItem = (index) => {
 
 <style lang="scss" scoped>
 
+.list_wrapper {
+  overflow-y: scroll;
+  height: 700px;
+
+}
+
 .description-none {
   display: none;
 }
@@ -78,6 +87,7 @@ const getItem = (index) => {
   display: flex;
   align-items: center;
   flex-direction: column;
+
 }
 
 .title {
@@ -124,11 +134,13 @@ h1 {
   gap: 5px;
   align-items: center;
   flex-direction: column;
+  overflow: auto;
+  min-height: 510px;
+}
 
-  .cryptoItem {
+.cryptoItem {
     cursor: pointer;
   }
-}
 
 .scrollbar-demo-item {
   display: flex;
@@ -155,5 +167,26 @@ h1 {
 .back:hover {
   color: #ad1818;
 }
+
+#element::-webkit-scrollbar {
+  width: 10px;
+}
+
+#element::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f9f9fd;
+  border-radius: 10px;
+}
+
+#element::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #fd624d;
+}
+
+@media screen and (max-height: 800px) {
+  .list_wrapper {
+    height: 510px;
+  }
+  }
 
 </style>
