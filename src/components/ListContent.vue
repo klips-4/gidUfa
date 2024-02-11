@@ -12,7 +12,6 @@
           <el-input placeholder="Введите название" v-model="input"/>
         </div>
       </div>
-        <div class="list_wrapper" id="element">
       <div class="crypto_list">
 
                         <span v-if="visible" class="scrollbar-demo-item"
@@ -24,7 +23,6 @@
         <span class="scrollbar-demo-item" v-if="!visible"
               @click="getItem(route.params.page + (item.id-1))"
         >{{ item.name}}</span>
-      </div>
         </div>
     </header>
   </div>
@@ -73,11 +71,6 @@ const getItem = (index) => {
 
 <style lang="scss" scoped>
 
-.list_wrapper {
-  overflow-y: scroll;
-  height: 700px;
-
-}
 
 .description-none {
   display: none;
@@ -107,13 +100,14 @@ const getItem = (index) => {
 }
 
 .header_listcontent {
-  overflow: hidden;
+  overflow: auto;
   position: relative; //родитель для header::after
   width: 100vw;
   height: 100vh;
   padding-top: 44px;
   background: linear-gradient(132.05deg, #214931 -17.38%, #498381 78.4%, #204434);
   color: #fff;
+
 }
 
 .header__top_listcontent {
@@ -134,8 +128,6 @@ h1 {
   gap: 5px;
   align-items: center;
   flex-direction: column;
-  overflow: auto;
-  min-height: 510px;
 }
 
 .cryptoItem {
@@ -183,17 +175,7 @@ h1 {
   background: #fd624d;
 }
 
-@media screen and (max-height: 800px) {
-  .list_wrapper {
-    height: 510px;
-  }
-  }
 
-@media screen and (max-width: 695px) {
-  .list_wrapper {
-    height: 300px;
-  }
 
-  }
 
 </style>
