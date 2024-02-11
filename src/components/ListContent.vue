@@ -189,4 +189,11 @@ h1 {
   }
   }
 
+@media screen and (max-width: 695px) {
+  .list_wrapper {
+    height: 300px;
+  }
+
+  }
+
 </style>
