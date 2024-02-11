@@ -66,7 +66,7 @@ const getItem = (index) => {
   return router.push(`/descriptions/${index}`)
 }
 
-
+console.log(descriptionStore.listcontent.data)
 </script>
 
 <style lang="scss" scoped>

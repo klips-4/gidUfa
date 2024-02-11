@@ -29,9 +29,9 @@
                        <span>
                   Координаты:
                 </span>
-                  <span>
+                    <a :href="`https://yandex.ru/maps/?pt=${descriptionStore.descriptions.data[index].coordinates}&z=18&l=map`">
              {{ descriptionStore.descriptions.data[index].coordinates }}
-          </span>
+          </a>
                 </div>
               </div>
               <div v-else class="location-address">
@@ -45,9 +45,10 @@
                 </div>
                 <div class="website">
                   <span>Сайт: </span>
-                  <span>
+                  <a :href="descriptionStore.descriptions.data[index].website">
              {{ descriptionStore.descriptions.data[index].website }}
-          </span>
+          </a>
+
                 </div>
               </div>
             </div>
@@ -125,8 +126,9 @@ import 'swiper/css/pagination';
 const route = useRoute()
 
 const index = ref(route.params.page.slice(-1))
-
 const page = ref(route.params.page.slice(0, -1))
+
+
 
 const selectPage = (index) => {
   return router.push(`/listcontent/${index}`)
