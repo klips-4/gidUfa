@@ -17,7 +17,7 @@
                         <span v-if="visible" class="scrollbar-demo-item"
                               v-for="(item, index) in descriptionStore.listcontent.data"
                               :key="item.name"
-                              @click="getItem(route.params.page + index)"
+                              @click="getItem(route.params.page + '-' + index)"
 
                         >{{ item.name }}</span>
         <span class="scrollbar-demo-item" v-if="!visible"
@@ -65,7 +65,6 @@ watch(search, () => {
 const getItem = (index) => {
   return router.push(`/descriptions/${index}`)
 }
-
 
 </script>
 
