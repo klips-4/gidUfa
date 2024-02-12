@@ -74,6 +74,7 @@
         <div class="text">
           <p>{{ descriptionStore.descriptions.data[index].description }}</p>
         </div>
+
         <div class="description-slider">
           <swiper
               class="mySwiper"
@@ -111,7 +112,7 @@
 import router from "../router";
 import {useDescriptionStore} from "../store/description-store";
 import {useRoute} from "vue-router";
-import {ref} from "vue";
+import {computed, ref} from "vue";
 
 import {Swiper, SwiperSlide} from 'swiper/vue'
 
@@ -125,13 +126,12 @@ import 'swiper/css/pagination';
 
 const route = useRoute()
 
-const index = ref(route.params.page.slice(-1))
-const page = ref(route.params.page.slice(0, -1))
+const temp_index = ref(route.params.page.indexOf('-'))
+const index = ref(route.params.page.slice(temp_index.value+1))
+const page = ref(route.params.page.slice(0,temp_index.value))
 
-
-
-const selectPage = (index) => {
-  return router.push(`/listcontent/${index}`)
+const selectPage = (page) => {
+  return router.push(`/listcontent/${page}`)
 }
 
 const descriptionStore = useDescriptionStore()
