@@ -129,6 +129,7 @@ const index = ref(route.params.page.slice(-1))
 const page = ref(route.params.page.slice(0, -1))
 
 const selectPage = (index) => {
+
   return router.push(`/listcontent/${index}`)
 }
 
