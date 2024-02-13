@@ -12,7 +12,6 @@
     "wc": false,
     "food": true,
     "description": "Своё название ",
-    "destination": "ул. Комарова ",
     "website": "https://rmbs-ufa.ru/ ",
     "address": "г. Уфа, ул. Комарова, д.7"
   },
@@ -29,7 +28,6 @@
     "wc": false,
     "food": true,
     "description": "Своё название ",
-    "destination": "ул. Комарова ",
     "website": "https://site/",
     "address": "г. Уфа, ул. Зайнуллы Расулева, 4"
   },
@@ -46,7 +44,6 @@
     "wc": false,
     "food": true,
     "description": "Своё название ",
-    "destination": "ул. Комарова ",
     "website": "https://site/",
     "address": "г. Уфа, ул. Советская 14"
   },
@@ -63,7 +60,6 @@
     "wc": false,
     "food": true,
     "description": "Своё название ",
-    "destination": "ул. Новомостовая",
     "website": "https://site/",
     "address": "г. Уфа, ул. Новомостовая, 20"
   },
@@ -80,7 +76,6 @@
     "wc": false,
     "food": true,
     "description": "Своё название ",
-    "destination": "ул. Гоголя",
     "website": "http://museum-nesterov.ru",
     "address": "г. Уфа, ул. Гоголя, 27"
   },
@@ -97,7 +92,6 @@
     "wc": false,
     "food": true,
     "description": "Своё название ",
-    "destination": "ул. Гоголя",
     "website": "http://literatmuzey.ru",
     "address": "г. Уфа, ул. Гоголя, 28"
   },
@@ -114,7 +108,6 @@
     "wc": false,
     "food": true,
     "description": "Своё название ",
-    "destination": "ул. К. Маркса",
     "website": "http://site.ru",
     "address": "г. Уфа, ул. К. Маркса, 6"
   },
@@ -131,7 +124,6 @@
     "wc": false,
     "food": true,
     "description": "Своё название ",
-    "destination": "ул. Ленина",
     "website": "http://site.ru",
     "address": "г. Уфа, ул. Ленина, 47"
   },
@@ -148,7 +140,6 @@
     "wc": false,
     "food": true,
     "description": "Своё название ",
-    "destination": "ул. Достоевского",
     "website": "http://site.ru",
     "address": "г. Уфа, ул. Достоевского, д. 78"
   },
@@ -165,7 +156,6 @@
     "wc": false,
     "food": true,
     "description": "Музей представляет собой двухэтажное здание с различными отделами и диорамой леса с чучелами животных. Переход с 1 на 2 этаж выполнен в виде пещеры. Также действует Музей пчелы, рассказывающий о знаменитых башкирских пчелах. В парке близ музея расположен вольер с животными.",
-    "destination": "Лесной проезд",
     "website": "http://site.ru",
     "address": "г. Уфа, Лесной проезд, 1"
   },
@@ -182,7 +172,6 @@
     "wc": false,
     "food": true,
     "description": "описание",
-    "destination": "ул. Менделеева",
     "website": "http://site.ru",
     "address": "г. Уфа, ул. Менделеева, д. 152/2 "
   }
