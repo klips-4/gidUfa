@@ -49,5 +49,141 @@
     "destination": "ул. Комарова ",
     "website": "https://site/",
     "address": "г. Уфа, ул. Советская 14"
+  },
+  {
+    "id": 4,
+    "name": "Дом-музей Ш.А. Худайбердина",
+    "image": 4,
+    "images": [
+      4.1,
+      4.2,
+      4.3
+    ],
+    "invalid": true,
+    "wc": false,
+    "food": true,
+    "description": "Своё название ",
+    "destination": "ул. Новомостовая",
+    "website": "https://site/",
+    "address": "г. Уфа, ул. Новомостовая, 20"
+  },
+  {
+    "id": 5,
+    "name": "Башкирский государственный художественный музей им. М.В. Нестерова",
+    "image": 5,
+    "images": [
+      5.1,
+      5.2,
+      5.3
+    ],
+    "invalid": true,
+    "wc": false,
+    "food": true,
+    "description": "Своё название ",
+    "destination": "ул. Гоголя",
+    "website": "http://museum-nesterov.ru",
+    "address": "г. Уфа, ул. Гоголя, 27"
+  },
+  {
+    "id": 6,
+    "name": "Мемориальный дом-музей Мажита Гафури",
+    "image": 6,
+    "images": [
+      6.1,
+      6.2,
+      6.3
+    ],
+    "invalid": true,
+    "wc": false,
+    "food": true,
+    "description": "Своё название ",
+    "destination": "ул. Гоголя",
+    "website": "http://literatmuzey.ru",
+    "address": "г. Уфа, ул. Гоголя, 28"
+  },
+  {
+    "id": 7,
+    "name": "Музей археологии и этнографии",
+    "image": 7,
+    "images": [
+      7.1,
+      7.2,
+      7.3
+    ],
+    "invalid": true,
+    "wc": false,
+    "food": true,
+    "description": "Своё название ",
+    "destination": "ул. К. Маркса",
+    "website": "http://site.ru",
+    "address": "г. Уфа, ул. К. Маркса, 6"
+  },
+  {
+    "id": 8,
+    "name": "Музей геологии и полезных ископаемых Республики Башкортостан",
+    "image": 8,
+    "images": [
+      8.1,
+      8.2,
+      8.3
+    ],
+    "invalid": true,
+    "wc": false,
+    "food": true,
+    "description": "Своё название ",
+    "destination": "ул. Ленина",
+    "website": "http://site.ru",
+    "address": "г. Уфа, ул. Ленина, 47"
+  },
+  {
+    "id": 9,
+    "name": "Дом-музей В.И. Ленина",
+    "image": 9,
+    "images": [
+      9.1,
+      9.2,
+      9.3
+    ],
+    "invalid": true,
+    "wc": false,
+    "food": true,
+    "description": "Своё название ",
+    "destination": "ул. Достоевского",
+    "website": "http://site.ru",
+    "address": "г. Уфа, ул. Достоевского, д. 78"
+  },
+  {
+    "id": 10,
+    "name": "Музей леса",
+    "image": 10,
+    "images": [
+      10.1,
+      10.2,
+      10.3
+    ],
+    "invalid": true,
+    "wc": false,
+    "food": true,
+    "description": "Музей представляет собой двухэтажное здание с различными отделами и диорамой леса с чучелами животных. Переход с 1 на 2 этаж выполнен в виде пещеры. Также действует Музей пчелы, рассказывающий о знаменитых башкирских пчелах. В парке близ музея расположен вольер с животными.",
+    "destination": "Лесной проезд",
+    "website": "http://site.ru",
+    "address": "г. Уфа, Лесной проезд, 1"
+  },
+  {
+    "id": 11,
+    "name": "Лимонарий",
+    "image": 11,
+    "images": [
+      11.1,
+      11.2,
+      11.3
+    ],
+    "invalid": true,
+    "wc": false,
+    "food": true,
+    "description": "описание",
+    "destination": "ул. Менделеева",
+    "website": "http://site.ru",
+    "address": "г. Уфа, ул. Менделеева, д. 152/2 "
   }
 ]
