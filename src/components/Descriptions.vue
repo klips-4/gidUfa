@@ -84,7 +84,10 @@
               slidesPerView="2"
               :navigation="true"
               :breakpoints="{
-                  480: {
+                  1500: {
+                    slidesPerView: 3
+                  },
+                  1270: {
                     slidesPerView: 2
                   },
                    350: {
