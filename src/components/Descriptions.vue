@@ -74,7 +74,6 @@
         <div class="text">
           <p>{{ descriptionStore.descriptions.data[index].description }}</p>
         </div>
-
         <div class="description-slider">
           <swiper
               class="mySwiper"
