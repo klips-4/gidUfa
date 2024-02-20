@@ -87,6 +87,7 @@
                   1500: {
                     slidesPerView: 3
                   },
+
                   1270: {
                     slidesPerView: 2
                   },
