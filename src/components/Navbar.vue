@@ -20,7 +20,7 @@ import {ref} from "vue";
 const menuItems = ref([
     {title: 'История Уфы', url: '/history'},
     {title: 'Достопримечательности', url: '/'},
-    {title: 'О сайте', url: '/'}
+    {title: 'О сайте', url: '/aboutsite'}
 ])
 
 </script>
