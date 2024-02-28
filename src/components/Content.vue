@@ -15,8 +15,6 @@
                 старины...</p>
             </div>
 
-            <a href="#!" class="destinations__btn">Читать больше</a>
-
           </div>
           <div class="destinations__slider">
             <swiper
