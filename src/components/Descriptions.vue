@@ -111,7 +111,7 @@
 import router from "../router";
 import {useDescriptionStore} from "../store/description-store";
 import {useRoute} from "vue-router";
-import {computed, ref} from "vue";
+import {ref} from "vue";
 
 import {Swiper, SwiperSlide} from 'swiper/vue'
 

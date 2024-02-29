@@ -11,13 +11,13 @@ export const useDescriptionStore = defineStore('description-store', {
         actions: {
             async fetchDescriptionData(pageName) {
                 await axios
-                    .get(`./public/database/${pageName}.json`)
+                    .get(`./database/${pageName}.json`)
                     .then(response => (this.descriptions = response));
 
             },
             async fetchListContentData(pageName) {
                 await axios
-                    .get(`./public/database/${pageName}.json`)
+                    .get(`./database/${pageName}.json`)
                     .then(response => (this.listcontent = response));
             },
         },
