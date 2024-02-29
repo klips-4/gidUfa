@@ -84,6 +84,7 @@ import Navbar from "@/components/Navbar.vue";
   width: 80%;
   font-size: 22px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .developers, .footer {
