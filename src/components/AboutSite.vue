@@ -67,7 +67,7 @@ import Navbar from "@/components/Navbar.vue";
 }
 
 .header_listcontent {
-  overflow: hidden;
+  overflow: auto;
   position: relative; //родитель для header::after
   width: 100vw;
   height: 100vh;
