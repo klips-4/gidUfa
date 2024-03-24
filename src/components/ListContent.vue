@@ -45,7 +45,12 @@ descriptionStore.fetchListContentData(route.params.page)
 
 const List_Title = {
   fountains: 'Фонтаны',
-  museums: 'Музеи'
+  museums: 'Музеи',
+  monuments: 'Памятники',
+  park: 'Парки и скверы',
+  religion: 'Религиозные здания',
+  sport: 'Спортивные сооружения',
+  theaters: 'Театры'
 }
 const Title = ref(List_Title[route.params.page])
 const visible = ref(true)

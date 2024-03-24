@@ -277,6 +277,10 @@
   font-weight: 500;
   color: var(--secondary);
   font-family: Calibri;
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
 }
 
 .destinations__text p {
