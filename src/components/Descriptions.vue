@@ -25,13 +25,13 @@
                             <div class="separator"></div>
                             <div @click="nextSlide"><img src="../assets/images/next.png" alt=""></div>
                         </div>
-                        <div class="location">
+                        <div class="location ">
                             <div v-if="descriptionStore.descriptions.data[index].coordinates" class="location-address">
                                 <div class="coordinates">
                        <span>
                   Координаты:
                 </span>
-                                    <a :href="`https://yandex.ru/maps/?pt=${descriptionStore.descriptions.data[index].coordinates}&z=18&l=map`">
+                                    <a class="button_back" :href="`https://yandex.ru/maps/?pt=${descriptionStore.descriptions.data[index].coordinates}&z=18&l=map`">
                                         {{ descriptionStore.descriptions.data[index].coordinates }}
                                     </a>
                                 </div>
@@ -47,7 +47,7 @@
                                 </div>
                                 <div class="website">
                                     <span>Сайт: </span>
-                                    <a :href="descriptionStore.descriptions.data[index].website">
+                                    <a class="button_back" :href="descriptionStore.descriptions.data[index].website">
                                         {{ descriptionStore.descriptions.data[index].website }}
                                     </a>
 

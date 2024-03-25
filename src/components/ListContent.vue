@@ -95,6 +95,10 @@ const getItem = (index) => {
   text-align: center;
   color: #fcfbfa;
   text-shadow: 5px 5px 0px #fd624d;
+
+  @media (max-width: 650px) {
+    font-size: 40px;
+  }
 }
 
 .searchInput {

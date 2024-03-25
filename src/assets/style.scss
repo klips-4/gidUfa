@@ -248,8 +248,8 @@
 }
 
 .destinations__content {
-  max-width: 100%;
-  width: 350px;
+  text-align: center;
+  width: 300px;
 }
 
 .destinations__slider {
@@ -278,9 +278,6 @@
   color: var(--secondary);
   font-family: Calibri;
 
-  @media (max-width: 650px) {
-    font-size: 16px;
-  }
 }
 
 .destinations__text p {
