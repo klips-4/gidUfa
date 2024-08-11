@@ -6,9 +6,7 @@
         <div class="destinations__row">
           <div class="destinations__content">
 
-            <h2 class="destinations__title">
-              <span>Достопримечательности</span>
-            </h2>
+            <h2 class="destinations__h2">Достопримечательности</h2>
             <div class="destinations__text">
               <p>Уфа интересна многими историческими и археологическими памятниками, ее архитектура
                 характеризуется сочетанием разных стилей и традиций, сохранилось множество интересных памятников

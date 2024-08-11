@@ -252,6 +252,10 @@
   width: 300px;
 }
 
+.destinations__h2 {
+  margin-bottom: 10px;
+}
+
 .destinations__slider {
   display: flex;
   width: 1110px;
@@ -264,10 +268,14 @@
   font-size: 55px;
   font-weight: 600;
   font-family: Calibri;
+  margin-right: 20px;
 }
 
 .destinations__title span {
   font-size: 30px;
+  @media (max-width: 840px){
+    font-size: 20px;
+  }
 }
 
 .destinations__text {
@@ -280,11 +288,7 @@
 
 }
 
-.destinations__text p {
 
-  text-align: justify;
-
-}
 
 .destinations__btn {
   display: inline-block;
